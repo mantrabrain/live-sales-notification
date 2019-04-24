@@ -29,6 +29,7 @@ class Live_Sales_Notifications_Admin
     public function admin_enqueue_scripts()
     {
         $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : '';
+        $page = sanitize_text_field($page);
         if ($page == 'live-sales-notifications') {
             global $wp_scripts;
             $scripts = $wp_scripts->registered;

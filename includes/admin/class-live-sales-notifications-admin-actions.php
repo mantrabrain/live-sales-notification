@@ -99,10 +99,10 @@ class Live_Sales_Notifications_Admin_Actions
             return false;
         }
         $data = $_POST['live_sales_notifications_params'];
-        $data ['virtual_name'] = $this->stripslashes_deep($data['virtual_name']);
-        $data ['virtual_city'] = $this->stripslashes_deep($data['virtual_city']);
-        $data ['custom_css'] = $this->stripslashes_deep($data['custom_css']);
-        $data ['virtual_country'] = $this->stripslashes_deep($data['virtual_country']);
+        $data ['virtual_name'] = sanitize_text_field($this->stripslashes_deep($data['virtual_name']));
+        $data ['virtual_city'] = sanitize_text_field($this->stripslashes_deep($data['virtual_city']));
+        $data ['custom_css'] = sanitize_text_field($this->stripslashes_deep($data['custom_css']));
+        $data ['virtual_country'] = sanitize_text_field($this->stripslashes_deep($data['virtual_country']));
         update_option('_live_sales_notifications_prefix', substr(md5(date("YmdHis")), 0, 10));
         if (isset($data['check_key'])) {
             unset($data['check_key']);

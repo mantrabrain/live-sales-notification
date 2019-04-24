@@ -22,7 +22,7 @@
                                 <td width="90%">
 
                                                     <textarea
-                                                            name="<?php echo live_sales_notifications_set_field('message_purchased', 1) ?>"><?php echo strip_tags($message) ?></textarea>
+                                                            name="<?php echo esc_attr(live_sales_notifications_set_field('message_purchased', 1)) ?>"><?php echo strip_tags($message) ?></textarea>
 
                                 </td>
                                 <td>
@@ -73,35 +73,35 @@
         </tr>
         <tr valign="top">
             <th scope="row">
-                <label for="<?php echo live_sales_notifications_set_field('custom_shortcode') ?>"><?php esc_html_e('Custom', 'live-sales-notifications') ?></label>
+                <label for="<?php echo esc_attr(live_sales_notifications_set_field('custom_shortcode')) ?>"><?php esc_html_e('Custom', 'live-sales-notifications') ?></label>
             </th>
             <td>
                 <?php $custom_shortcode = live_sales_notifications_get_field('custom_shortcode', esc_attr('{number} people seeing this product right now')); ?>
-                <input id="<?php echo live_sales_notifications_set_field('custom_shortcode') ?>" type="text" tabindex="0"
+                <input id="<?php echo esc_attr(live_sales_notifications_set_field('custom_shortcode')) ?>" type="text" tabindex="0"
                        value="<?php echo $custom_shortcode ?>"
-                       name="<?php echo live_sales_notifications_set_field('custom_shortcode') ?>"/>
+                       name="<?php echo esc_attr(live_sales_notifications_set_field('custom_shortcode')) ?>"/>
 
                 <p class="description"><?php esc_html_e('This is {custom} shortcode content.', 'live-sales-notifications') ?></p>
             </td>
         </tr>
         <tr valign="top">
             <th scope="row">
-                <label for="<?php echo live_sales_notifications_set_field('min_number') ?>"><?php esc_html_e('Min Number', 'live-sales-notifications') ?></label>
+                <label for="<?php echo esc_attr(live_sales_notifications_set_field('min_number')) ?>"><?php esc_html_e('Min Number', 'live-sales-notifications') ?></label>
             </th>
             <td>
-                <input id="<?php echo live_sales_notifications_set_field('min_number') ?>" type="number" tabindex="0"
-                       value="<?php echo live_sales_notifications_get_field('min_number', 100) ?>"
-                       name="<?php echo live_sales_notifications_set_field('min_number') ?>"/>
+                <input id="<?php echo esc_attr(live_sales_notifications_set_field('min_number')) ?>" type="number" tabindex="0"
+                       value="<?php echo esc_attr(live_sales_notifications_get_field('min_number', 100)) ?>"
+                       name="<?php echo esc_attr(live_sales_notifications_set_field('min_number')) ?>"/>
             </td>
         </tr>
         <tr valign="top">
             <th scope="row">
-                <label for="<?php echo live_sales_notifications_set_field('max_number') ?>"><?php esc_html_e('Max number', 'live-sales-notifications') ?></label>
+                <label for="<?php echo esc_attr(live_sales_notifications_set_field('max_number')) ?>"><?php esc_html_e('Max number', 'live-sales-notifications') ?></label>
             </th>
             <td>
-                <input id="<?php echo live_sales_notifications_set_field('max_number') ?>" type="number" tabindex="0"
-                       value="<?php echo live_sales_notifications_get_field('max_number', 200) ?>"
-                       name="<?php echo live_sales_notifications_set_field('max_number') ?>"/>
+                <input id="<?php echo esc_attr(live_sales_notifications_set_field('max_number')) ?>" type="number" tabindex="0"
+                       value="<?php echo esc_attr(live_sales_notifications_get_field('max_number', 200)) ?>"
+                       name="<?php echo esc_attr(live_sales_notifications_set_field('max_number')) ?>"/>
 
                 <p class="description"><?php esc_html_e('Number will random from Min number to Max number', 'live-sales-notifications') ?></p>
             </td>

@@ -7,8 +7,8 @@
         </th>
         <td>
             <input data-ele="highlight" type="text" class="color-picker"
-                   name="<?php echo live_sales_notifications_set_field('product_color') ?>"
-                   value="<?php echo live_sales_notifications_get_field('product_color', '#000000') ?>"
+                   name="<?php echo esc_attr(live_sales_notifications_set_field('product_color')) ?>"
+                   value="<?php echo esc_attr(live_sales_notifications_get_field('product_color', '#000000')) ?>"
                    style="background-color: <?php echo esc_attr(live_sales_notifications_get_field('product_color', '#000000')) ?>"/>
         </td>
     </tr>
@@ -20,8 +20,8 @@
             <input data-ele="textcolor"
                    style="background-color: <?php echo esc_attr(live_sales_notifications_get_field('text_color', '#000000')) ?>"
                    type="text" class="color-picker"
-                   name="<?php echo live_sales_notifications_set_field('text_color') ?>"
-                   value="<?php echo live_sales_notifications_get_field('text_color', '#000000') ?>"/>
+                   name="<?php echo esc_attr(live_sales_notifications_set_field('text_color')) ?>"
+                   value="<?php echo esc_attr(live_sales_notifications_get_field('text_color', '#000000')) ?>"/>
         </td>
     </tr>
     <tr valign="top">
@@ -31,8 +31,8 @@
         <td>
             <input style="background-color: <?php echo esc_attr(live_sales_notifications_get_field('background_color', '#ffffff')) ?>"
                    data-ele="backgroundcolor" type="text" class="color-picker"
-                   name="<?php echo live_sales_notifications_set_field('background_color') ?>"
-                   value="<?php echo live_sales_notifications_get_field('background_color', '#ffffff') ?>"/>
+                   name="<?php echo esc_attr(live_sales_notifications_set_field('background_color')) ?>"
+                   value="<?php echo esc_attr(live_sales_notifications_get_field('background_color', '#ffffff')) ?>"/>
         </td>
     </tr>
     <tr valign="top" class="background-image">
@@ -41,7 +41,7 @@
         </th>
         <td>
             <div class="mbui grid">
-                <?php $attachment_id = live_sales_notifications_get_field('background_image', 0);
+                <?php $attachment_id = (int)live_sales_notifications_get_field('background_image', 0);
 
                 $attachment_url = wp_get_attachment_url($attachment_id);
                 ?>
@@ -55,11 +55,11 @@
                            value="<?php _e('Remove image'); ?>"
                            style="<?php echo (empty($attachment_url) || $attachment_id < 1) ? 'display:none;' : ''; ?>"/>
 
-                    <input id="<?php echo live_sales_notifications_set_field('background_image') ?>"
+                    <input id="<?php echo esc_attr(live_sales_notifications_set_field('background_image')) ?>"
                            type="hidden" <?php checked(live_sales_notifications_get_field('background_image', 0), 0) ?>
                            tabindex="0" class="text image_attachment_id"
                            value="<?php echo $attachment_id; ?>"
-                           name="<?php echo live_sales_notifications_set_field('background_image') ?>"/>
+                           name="<?php echo esc_attr(live_sales_notifications_set_field('background_image')) ?>"/>
 
 
                 </div>
@@ -71,7 +71,7 @@
             <label><?php esc_html_e('Image Position', 'live-sales-notifications') ?></label>
         </th>
         <td>
-            <select name="<?php echo live_sales_notifications_set_field('image_position') ?>"
+            <select name="<?php echo esc_attr(live_sales_notifications_set_field('image_position')) ?>"
                     class="mbui fluid dropdown">
                 <option <?php selected(live_sales_notifications_get_field('image_position'), 0) ?>
                         value="0"><?php esc_attr_e('Left', 'live-sales-notifications') ?></option>
@@ -89,10 +89,10 @@
                 <div class="fields">
                     <div class="four wide field">
                         <div class="mbui toggle checkbox center aligned segment">
-                            <input id="<?php echo live_sales_notifications_set_field('position') ?>"
+                            <input id="<?php echo esc_attr(live_sales_notifications_set_field('position')) ?>"
                                    type="radio" <?php checked(live_sales_notifications_get_field('position', 0), 0) ?>
                                    tabindex="0" class="hidden" value="0"
-                                   name="<?php echo live_sales_notifications_set_field('position') ?>"/>
+                                   name="<?php echo esc_attr(live_sales_notifications_set_field('position')) ?>"/>
                             <label><?php esc_attr_e('Bottom left', 'live-sales-notifications') ?></label>
                         </div>
 
@@ -101,10 +101,10 @@
 
 
                         <div class="mbui toggle checkbox center aligned segment">
-                            <input id="<?php echo live_sales_notifications_set_field('position') ?>"
+                            <input id="<?php echo esc_attr(live_sales_notifications_set_field('position')) ?>"
                                    type="radio" <?php checked(live_sales_notifications_get_field('position'), 1) ?>
                                    tabindex="0" class="hidden" value="1"
-                                   name="<?php echo live_sales_notifications_set_field('position') ?>"/>
+                                   name="<?php echo esc_attr(live_sales_notifications_set_field('position')) ?>"/>
                             <label><?php esc_attr_e('Bottom right', 'live-sales-notifications') ?></label>
                         </div>
                     </div>
@@ -112,10 +112,10 @@
 
 
                         <div class="mbui toggle checkbox center aligned segment">
-                            <input id="<?php echo live_sales_notifications_set_field('position') ?>"
+                            <input id="<?php echo esc_attr(live_sales_notifications_set_field('position')) ?>"
                                    type="radio" <?php checked(live_sales_notifications_get_field('position'), 2) ?>
                                    tabindex="0" class="hidden" value="2"
-                                   name="<?php echo live_sales_notifications_set_field('position') ?>"/>
+                                   name="<?php echo esc_attr(live_sales_notifications_set_field('position')) ?>"/>
                             <label><?php esc_attr_e('Top left', 'live-sales-notifications') ?></label>
                         </div>
                     </div>
@@ -123,10 +123,10 @@
 
 
                         <div class="mbui toggle checkbox center aligned segment">
-                            <input id="<?php echo live_sales_notifications_set_field('position') ?>"
+                            <input id="<?php echo esc_attr(live_sales_notifications_set_field('position')) ?>"
                                    type="radio" <?php checked(live_sales_notifications_get_field('position'), 3) ?>
                                    tabindex="0" class="hidden" value="3"
-                                   name="<?php echo live_sales_notifications_set_field('position') ?>"/>
+                                   name="<?php echo esc_attr(live_sales_notifications_set_field('position')) ?>"/>
                             <label><?php esc_attr_e('Top right', 'live-sales-notifications') ?></label>
                         </div>
                     </div>
@@ -141,8 +141,8 @@
         <td>
             <div class="mbui form">
                 <div class="inline fields">
-                    <input type="number" name="<?php echo live_sales_notifications_set_field('border_radius') ?>"
-                           value="<?php echo live_sales_notifications_get_field('border_radius', '0') ?>"/>
+                    <input type="number" name="<?php echo esc_attr(live_sales_notifications_set_field('border_radius')) ?>"
+                           value="<?php echo esc_attr(live_sales_notifications_get_field('border_radius', '0')) ?>"/>
                     <label><?php esc_html_e('px', 'live-sales-notifications') ?></label>
                 </div>
             </div>
@@ -150,16 +150,16 @@
     </tr>
     <tr valign="top">
         <th scope="row">
-            <label for="<?php echo live_sales_notifications_set_field('show_close_icon') ?>">
+            <label for="<?php echo esc_attr(live_sales_notifications_set_field('show_close_icon')) ?>">
                 <?php esc_html_e('Show Close Icon', 'live-sales-notifications') ?>
             </label>
         </th>
         <td>
             <div class="mbui toggle checkbox">
-                <input id="<?php echo live_sales_notifications_set_field('show_close_icon') ?>"
+                <input id="<?php echo esc_attr(live_sales_notifications_set_field('show_close_icon')) ?>"
                        type="checkbox" <?php checked(live_sales_notifications_get_field('show_close_icon'), 1) ?>
                        tabindex="0" class="hidden" value="1"
-                       name="<?php echo live_sales_notifications_set_field('show_close_icon') ?>"/>
+                       name="<?php echo esc_attr(live_sales_notifications_set_field('show_close_icon'))?>"/>
                 <label></label>
             </div>
         </td>
@@ -171,8 +171,8 @@
         <td>
             <div class="mbui form">
                 <div class="inline fields">
-                    <input type="number" name="<?php echo live_sales_notifications_set_field('time_close') ?>"
-                           value="<?php echo live_sales_notifications_get_field('time_close', '24') ?>"/>
+                    <input type="number" name="<?php echo esc_attr(live_sales_notifications_set_field('time_close')) ?>"
+                           value="<?php echo esc_attr(live_sales_notifications_get_field('time_close', '24')) ?>"/>
                     <label><?php esc_html_e('hours', 'live-sales-notifications') ?></label>
                 </div>
             </div>
@@ -180,16 +180,16 @@
     </tr>
     <tr valign="top">
         <th scope="row">
-            <label for="<?php echo live_sales_notifications_set_field('image_redirect') ?>">
+            <label for="<?php echo esc_attr(live_sales_notifications_set_field('image_redirect')) ?>">
                 <?php esc_html_e('Image redirect', 'live-sales-notifications') ?>
             </label>
         </th>
         <td>
             <div class="mbui toggle checkbox">
-                <input id="<?php echo live_sales_notifications_set_field('image_redirect') ?>"
+                <input id="<?php echo esc_attr(live_sales_notifications_set_field('image_redirect')) ?>"
                        type="checkbox" <?php checked(live_sales_notifications_get_field('image_redirect'), 1) ?>
                        tabindex="0" class="hidden" value="1"
-                       name="<?php echo live_sales_notifications_set_field('image_redirect') ?>"/>
+                       name="<?php echo esc_attr(live_sales_notifications_set_field('image_redirect')) ?>"/>
                 <label></label>
             </div>
             <p class="description"><?php echo esc_html__('When click image, you will redirect to product single page.', 'live-sales-notifications') ?></p>
@@ -197,16 +197,16 @@
     </tr>
     <tr valign="top">
         <th scope="row">
-            <label for="<?php echo live_sales_notifications_set_field('image_redirect_target') ?>">
+            <label for="<?php echo esc_attr(live_sales_notifications_set_field('image_redirect_target')) ?>">
                 <?php esc_html_e('Link target', 'live-sales-notifications') ?>
             </label>
         </th>
         <td>
             <div class="mbui toggle checkbox">
-                <input id="<?php echo live_sales_notifications_set_field('image_redirect_target') ?>"
+                <input id="<?php echo esc_attr(live_sales_notifications_set_field('image_redirect_target')) ?>"
                        type="checkbox" <?php checked(live_sales_notifications_get_field('image_redirect_target'), 1) ?>
                        tabindex="0" class="hidden" value="1"
-                       name="<?php echo live_sales_notifications_set_field('image_redirect_target') ?>"/>
+                       name="<?php echo esc_attr(live_sales_notifications_set_field('image_redirect_target')) ?>"/>
                 <label></label>
             </div>
             <p class="description"><?php echo esc_html__('Open link on new tab.', 'live-sales-notifications') ?></p>
@@ -215,14 +215,14 @@
 
     <tr valign="top">
         <th scope="row">
-            <label for="<?php echo live_sales_notifications_set_field('message_display_effect') ?>">
+            <label for="<?php echo esc_attr(live_sales_notifications_set_field('message_display_effect')) ?>">
                 <?php esc_html_e('Message display effect', 'live-sales-notifications') ?>
             </label>
         </th>
         <td>
-            <select name="<?php echo live_sales_notifications_set_field('message_display_effect') ?>"
+            <select name="<?php echo esc_attr(live_sales_notifications_set_field('message_display_effect')) ?>"
                     class="mbui fluid dropdown"
-                    id="<?php echo live_sales_notifications_set_field('message_display_effect') ?>">
+                    id="<?php echo esc_attr(live_sales_notifications_set_field('message_display_effect')) ?>">
                 <optgroup label="Bouncing Entrances">
                     <option <?php selected(live_sales_notifications_get_field('message_display_effect'), 'bounceIn') ?>
                             value="bounceIn"><?php esc_attr_e('bounceIn', 'live-sales-notifications') ?></option>
@@ -308,14 +308,14 @@
     </tr>
     <tr valign="top">
         <th scope="row">
-            <label for="<?php echo live_sales_notifications_set_field('message_hidden_effect') ?>">
+            <label for="<?php echo esc_attr(live_sales_notifications_set_field('message_hidden_effect')) ?>">
                 <?php esc_html_e('Message hidden effect', 'live-sales-notifications') ?>
             </label>
         </th>
         <td>
-            <select name="<?php echo live_sales_notifications_set_field('message_hidden_effect') ?>"
+            <select name="<?php echo esc_attr(live_sales_notifications_set_field('message_hidden_effect')) ?>"
                     class="mbui fluid dropdown"
-                    id="<?php echo live_sales_notifications_set_field('message_hidden_effect') ?>">
+                    id="<?php echo esc_attr(live_sales_notifications_set_field('message_hidden_effect')) ?>">
                 <optgroup label="Bouncing Exits">
                     <option <?php selected(live_sales_notifications_get_field('message_hidden_effect'), 'bounceOut') ?>
                             value="bounceOut"><?php esc_attr_e('bounceOut', 'live-sales-notifications') ?></option>
@@ -401,13 +401,13 @@
     </tr>
     <tr valign="top">
         <th scope="row">
-            <label for="<?php echo live_sales_notifications_set_field('custom_css') ?>">
+            <label for="<?php echo esc_attr(live_sales_notifications_set_field('custom_css')) ?>">
                 <?php esc_html_e('Custom CSS', 'live-sales-notifications') ?>
             </label>
         </th>
         <td>
                                 <textarea class=""
-                                          name="<?php echo live_sales_notifications_set_field('custom_css') ?>"><?php echo live_sales_notifications_get_field('custom_css') ?></textarea>
+                                          name="<?php echo esc_attr(live_sales_notifications_set_field('custom_css')) ?>"><?php echo esc_html(live_sales_notifications_get_field('custom_css')) ?></textarea>
         </td>
     </tr>
     </tbody>

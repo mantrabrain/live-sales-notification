@@ -15,7 +15,7 @@
             <label><?php esc_html_e('Show Products', 'live-sales-notifications') ?></label>
         </th>
         <td>
-            <select name="<?php echo live_sales_notifications_set_field('show_product_option') ?>"
+            <select name="<?php echo esc_attr(live_sales_notifications_set_field('show_product_option')); ?>"
                     class="mbui fluid dropdown">
                 <option <?php selected(live_sales_notifications_get_field('show_product_option'), 0) ?>
                         value="0"><?php esc_attr_e('Get from Billing', 'live-sales-notifications') ?></option>
@@ -34,14 +34,14 @@
     </tr>
     <tr valign="top">
         <th scope="row">
-            <label for="<?php echo live_sales_notifications_set_field('enable_out_of_stock_product') ?>"><?php esc_html_e('Out-of-stock products', 'live-sales-notifications') ?></label>
+            <label for="<?php echo esc_attr(live_sales_notifications_set_field('enable_out_of_stock_product')); ?>"><?php esc_html_e('Out-of-stock products', 'live-sales-notifications') ?></label>
         </th>
         <td>
             <div class="mbui toggle checkbox">
-                <input id="<?php echo live_sales_notifications_set_field('enable_out_of_stock_product') ?>"
+                <input id="<?php echo esc_attr(live_sales_notifications_set_field('enable_out_of_stock_product')); ?>"
                        type="checkbox" <?php checked(live_sales_notifications_get_field('enable_out_of_stock_product'), 1) ?>
                        tabindex="0" class="hidden" value="1"
-                       name="<?php echo live_sales_notifications_set_field('enable_out_of_stock_product') ?>"/>
+                       name="<?php echo esc_attr(live_sales_notifications_set_field('enable_out_of_stock_product')); ?>"/>
                 <label></label>
             </div>
             <p class="description"><?php esc_html_e('Turn on to show out-of-stock products on notifications.', 'live-sales-notifications') ?></p>
@@ -56,7 +56,7 @@
             <?php
             $cates = live_sales_notifications_get_field('select_categories', array()); ?>
             <select multiple="multiple"
-                    name="<?php echo live_sales_notifications_set_field('select_categories', true) ?>"
+                    name="<?php echo esc_attr(live_sales_notifications_set_field('select_categories', true)); ?>"
                     class="category-search"
                     placeholder="<?php esc_attr_e('Please select category', 'live-sales-notifications') ?>">
                 <?php
@@ -85,7 +85,7 @@
         <td>
             <?php $products = live_sales_notifications_get_field('cate_exclude_products', array()); ?>
             <select multiple="multiple"
-                    name="<?php echo live_sales_notifications_set_field('cate_exclude_products', true) ?>"
+                    name="<?php echo esc_attr(live_sales_notifications_set_field('cate_exclude_products', true)); ?>"
                     class="product-search"
                     placeholder="<?php esc_attr_e('Please select products', 'live-sales-notifications') ?>">
                 <?php if (count($products)) {
@@ -117,9 +117,9 @@
             <label><?php esc_html_e('Product limit', 'live-sales-notifications') ?></label>
         </th>
         <td>
-            <input id="<?php echo live_sales_notifications_set_field('limit_product') ?>" type="number" tabindex="0"
-                   value="<?php echo live_sales_notifications_get_field('limit_product', 50) ?>"
-                   name="<?php echo live_sales_notifications_set_field('limit_product') ?>"/>
+            <input id="<?php echo esc_attr(live_sales_notifications_set_field('limit_product')) ?>" type="number" tabindex="0"
+                   value="<?php echo esc_attr(live_sales_notifications_get_field('limit_product', 50)) ?>"
+                   name="<?php echo esc_attr(live_sales_notifications_set_field('limit_product')); ?>"/>
 
             <p class="description"><?php esc_html_e('Product quantity will be got in list latest products.', 'live-sales-notifications') ?></p>
         </td>
@@ -131,7 +131,7 @@
         <td>
             <?php $products = live_sales_notifications_get_field('exclude_products', array()); ?>
             <select multiple="multiple"
-                    name="<?php echo live_sales_notifications_set_field('exclude_products', true) ?>"
+                    name="<?php echo esc_attr(live_sales_notifications_set_field('exclude_products', true)); ?>"
                     class="product-search"
                     placeholder="<?php esc_attr_e('Please select products', 'live-sales-notifications') ?>">
                 <?php if (count($products)) {
@@ -159,14 +159,14 @@
     </tr>
     <tr valign="top">
         <th scope="row">
-            <label for="<?php echo live_sales_notifications_set_field('product_link') ?>"><?php esc_html_e('External link', 'live-sales-notifications') ?></label>
+            <label for="<?php echo esc_attr(live_sales_notifications_set_field('product_link')); ?>"><?php esc_html_e('External link', 'live-sales-notifications') ?></label>
         </th>
         <td>
             <div class="mbui toggle checkbox">
-                <input id="<?php echo live_sales_notifications_set_field('product_link') ?>"
+                <input id="<?php echo esc_attr(live_sales_notifications_set_field('product_link')); ?>"
                        type="checkbox" <?php checked(live_sales_notifications_get_field('product_link'), 1) ?>
                        tabindex="0" class="hidden" value="1"
-                       name="<?php echo live_sales_notifications_set_field('product_link') ?>"/>
+                       name="<?php echo esc_attr(live_sales_notifications_set_field('product_link')); ?>"/>
                 <label></label>
             </div>
             <p class="description"><?php esc_html_e('Working with  External/Affiliate product. Product link is product URL.', 'live-sales-notifications') ?></p>
@@ -180,11 +180,11 @@
             <div class="fields">
                 <div class="twelve wide field">
                     <input type="number"
-                           value="<?php echo live_sales_notifications_get_field('order_threshold_num', 30) ?>"
-                           name="<?php echo live_sales_notifications_set_field('order_threshold_num') ?>"/>
+                           value="<?php echo esc_attr(live_sales_notifications_get_field('order_threshold_num', 30)); ?>"
+                           name="<?php echo esc_attr(live_sales_notifications_set_field('order_threshold_num')); ?>"/>
                 </div>
                 <div class="two wide field">
-                    <select name="<?php echo live_sales_notifications_set_field('order_threshold_time') ?>"
+                    <select name="<?php echo esc_attr(live_sales_notifications_set_field('order_threshold_time')) ?>"
                             class="mbui fluid dropdown">
                         <option <?php selected(live_sales_notifications_get_field('order_threshold_time'), 0) ?>
                                 value="0"><?php esc_attr_e('Hours', 'live-sales-notifications') ?></option>
@@ -215,7 +215,7 @@
 
             ?>
             <select multiple="multiple"
-                    name="<?php echo live_sales_notifications_set_field('order_statuses', true) ?>"
+                    name="<?php echo esc_attr(live_sales_notifications_set_field('order_statuses', true)); ?>"
                     class="mbui fluid dropdown">
                 <?php foreach ($statuses as $k => $status) {
                     $selected = '';
@@ -237,7 +237,7 @@
             <?php
             $products_ach = live_sales_notifications_get_field('archive_products', array()); ?>
             <select multiple="multiple"
-                    name="<?php echo live_sales_notifications_set_field('archive_products', true) ?>"
+                    name="<?php echo esc_attr(live_sales_notifications_set_field('archive_products', true)); ?>"
                     class="product-search"
                     placeholder="<?php esc_attr_e('Please select products', 'live-sales-notifications') ?>">
                 <?php if (count($products_ach)) {
@@ -270,7 +270,7 @@
             $first_names = live_sales_notifications_get_field('virtual_name')
             ?>
             <textarea
-                    name="<?php echo live_sales_notifications_set_field('virtual_name') ?>"><?php echo $first_names ?></textarea>
+                    name="<?php echo esc_attr(live_sales_notifications_set_field('virtual_name')) ?>"><?php echo $first_names ?></textarea>
 
             <p class="description"><?php esc_html_e('Virtual first name what will show on notification. Each first name on a line.', 'live-sales-notifications') ?></p>
         </td>
@@ -281,8 +281,8 @@
         <td>
             <div class="mbui form">
                 <div class="inline fields">
-                    <input type="number" name="<?php echo live_sales_notifications_set_field('virtual_time') ?>"
-                           value="<?php echo live_sales_notifications_get_field('virtual_time', '10') ?>"/>
+                    <input type="number" name="<?php echo esc_attr(live_sales_notifications_set_field('virtual_time')) ?>"
+                           value="<?php echo esc_attr(live_sales_notifications_get_field('virtual_time', '10')) ?>"/>
                     <label><?php esc_html_e('hours', 'live-sales-notifications') ?></label>
                 </div>
             </div>
@@ -293,7 +293,7 @@
         <th scope="row">
             <label><?php esc_html_e('Address', 'live-sales-notifications') ?></label></th>
         <td>
-            <select name="<?php echo live_sales_notifications_set_field('country') ?>" class="mbui fluid dropdown">
+            <select name="<?php echo esc_attr(live_sales_notifications_set_field('country')) ?>" class="mbui fluid dropdown">
                 <option <?php selected(live_sales_notifications_get_field('country'), 0) ?>
                         value="0"><?php esc_attr_e('Auto Detect', 'live-sales-notifications') ?></option>
                 <option <?php selected(live_sales_notifications_get_field('country'), 1) ?>
@@ -311,7 +311,7 @@
             $virtual_city = live_sales_notifications_get_field('virtual_city');
             ?>
             <textarea
-                    name="<?php echo live_sales_notifications_set_field('virtual_city') ?>"><?php echo esc_attr($virtual_city) ?></textarea>
+                    name="<?php echo esc_attr(live_sales_notifications_set_field('virtual_city')) ?>"><?php echo esc_attr($virtual_city) ?></textarea>
 
             <p class="description"><?php esc_html_e('Virtual city name what will show on notification. Each city name on a line.', 'live-sales-notifications') ?></p>
         </td>
@@ -321,7 +321,7 @@
             <label><?php esc_html_e('Virtual Country', 'live-sales-notifications') ?></label></th>
         <td>
             <?php $virtual_country = live_sales_notifications_get_field('virtual_country') ?>
-            <input type="text" name="<?php echo live_sales_notifications_set_field('virtual_country') ?>"
+            <input type="text" name="<?php echo esc_attr(live_sales_notifications_set_field('virtual_country')) ?>"
                    value="<?php echo esc_attr($virtual_country) ?>"/>
 
             <p class="description"><?php esc_html_e('Virtual country name what will show on notification.', 'live-sales-notifications') ?></p>
@@ -337,7 +337,7 @@
             <?php global $_wp_additional_image_sizes;
 
             ?>
-            <select name="<?php echo live_sales_notifications_set_field('product_sizes') ?>"
+            <select name="<?php echo esc_attr(live_sales_notifications_set_field('product_sizes')) ?>"
                     class="mbui fluid dropdown">
                 <?php foreach ($_wp_additional_image_sizes as $thumb => $thumb_option) { ?>
                     <option <?php selected(live_sales_notifications_get_field('product_sizes'), $thumb) ?>
@@ -351,14 +351,14 @@
     </tr>
     <tr valign="top" class="get_from_billing hidden">
         <th scope="row">
-            <label for="<?php echo live_sales_notifications_set_field('non_ajax') ?>"><?php esc_html_e('Non Ajax', 'live-sales-notifications') ?></label>
+            <label for="<?php echo esc_attr(live_sales_notifications_set_field('non_ajax')) ?>"><?php esc_html_e('Non Ajax', 'live-sales-notifications') ?></label>
         </th>
         <td>
             <div class="mbui toggle checkbox">
-                <input id="<?php echo live_sales_notifications_set_field('non_ajax') ?>"
+                <input id="<?php echo esc_attr(live_sales_notifications_set_field('non_ajax')) ?>"
                        type="checkbox" <?php checked(live_sales_notifications_get_field('non_ajax'), 1) ?>
                        tabindex="0" class="hidden" value="1"
-                       name="<?php echo live_sales_notifications_set_field('non_ajax') ?>"/>
+                       name="<?php echo esc_attr(live_sales_notifications_set_field('non_ajax')) ?>"/>
                 <label></label>
             </div>
             <p class="description"><?php esc_html_e('Load popup will not use ajax. Your site will be load faster. It creates cache. It is not working with Get product from Billing feature and options of Product detail tab.', 'live-sales-notifications') ?></p>

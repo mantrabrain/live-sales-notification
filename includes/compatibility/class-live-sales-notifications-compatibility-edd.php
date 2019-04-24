@@ -39,27 +39,6 @@ class Live_Sales_Notifications_Compatibility_EDD extends Live_Sales_Notification
         // TODO: Implement order_completed() method.
     }
 
-    function get_product1($settings = array())
-    {
-        // TODO: Implement get_product() method.
-
-        $product = array(
-
-            array(
-                "thumb" => "https://mantrabrain.com/wp-content/uploads/2019/01/mantranews-banner-1024x768.png",
-                "title" => "Mantranews WordPress Theme",
-                "url" => "https://mantrabrain.com/downloads/mantranews-wordpress-news-theme/",
-                "first_name" => "Nabin",
-                "city" => "Kathmandu",
-                "state" => "Bagmati",
-                "country" => "Nepal",
-                'time' => live_sales_notifications_time_subsctract('2019-04-17 15:15:30'),
-            )
-        );
-        return $product;
-
-    }
-
     function get_product($settings = array())
     {
         // TODO: Implement get_product() method.

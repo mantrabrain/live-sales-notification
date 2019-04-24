@@ -6,7 +6,7 @@
             <label><?php esc_html_e('Store Type', 'live-sales-notifications') ?></label>
         </th>
         <td>
-            <select name="<?php echo live_sales_notifications_set_field('store_type') ?>"
+            <select name="<?php live_sales_notifications_set_field('store_type') ?>"
                     class="mbui fluid dropdown">
                 <?php $store_types = live_sales_notifications_store_type();
 
