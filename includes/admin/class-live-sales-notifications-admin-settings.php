@@ -125,7 +125,7 @@ class Live_Sales_Notifications_Admin_Settings
             'products' => __('Products', 'live-sales-notifications'),
             'product-detail' => __('Product Details', 'live-sales-notifications'),
             'time' => __('Time', 'live-sales-notifications'),
-            'audio' => __('Audio', 'live-sales-notifications'),
+            //'audio' => __('Audio', 'live-sales-notifications'),
             'assign' => __('Assign', 'live-sales-notifications'),
         ));
     }

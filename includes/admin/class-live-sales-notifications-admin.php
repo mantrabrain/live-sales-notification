@@ -97,7 +97,7 @@ class Live_Sales_Notifications_Admin
             'manage_options', 'live-sales-notifications', array(
             'Live_Sales_Notifications_Admin_Settings',
             'setting_page'
-        ), 'dashicons-format-status', 2);
+        ), 'dashicons-format-status', 25);
 
     }
 
