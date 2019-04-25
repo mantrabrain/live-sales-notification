@@ -21,7 +21,7 @@ if (!defined('ABSPATH')) {
  * @author  Nick Ilyin <nick.ilyin@gmail.com>
  * Original author: Victor Stanciu <vic.stanciu@gmail.com>
  *
- * @version 2.8.33
+ * @version 1.0.0
  */
 if (!class_exists('Live_Sales_Notifications_Mobile_Detection')) {
 

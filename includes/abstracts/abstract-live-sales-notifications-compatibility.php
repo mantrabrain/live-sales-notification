@@ -6,7 +6,7 @@
  * the different data store classes.
  *
  * @class       Live_Sales_Notifications_Compatibility
- * @version     3.0.0
+ * @version 1.0.0
  * @package     Live_Sales_Notifications/Classes
  */
 
@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
  *
  * Implemented by classes using the same CRUD(s) pattern.
  *
- * @version  1.0.0
+ * @version 1.0.0
  * @package  Live_Sales_Notifications/Abstracts
  */
 abstract class Live_Sales_Notifications_Compatibility

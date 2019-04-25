@@ -1,4 +1,4 @@
-=== Live Sales Notification===
+=== Live Sales Notifications - WooCommerce & Easy Digital Download Sales Notification ===
 Contributors: mantrabrain
 Donate link: http://www.mantrabrain.com/
 Tags: sales, notification, woocommerce, easy-digital-download, edd

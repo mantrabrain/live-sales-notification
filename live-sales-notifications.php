@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Live Sales Notifications
+ * Plugin Name: Live Sales Notifications - WooCommerce & Easy Digital Download Sales Notification
  * Description: Live sales notifications for WooCommerce and Easy Digital Download products
  * Version: 1.0.0
  * Author: mantrabrain
