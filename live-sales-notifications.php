@@ -7,6 +7,7 @@
  * Author URI: https://mantrabrain.com
  * Requires at least: 4.4
  * Tested up to: 5.1.1
+ * License: GPLv3 or later
  */
 /*
 
