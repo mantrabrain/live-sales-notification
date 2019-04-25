@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Live Sales Notifications - WooCommerce & Easy Digital Download Sales Notification
+ * Plugin Name: Live Sales Notifications
  * Description: Live sales notifications for WooCommerce and Easy Digital Download products
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: mantrabrain
  * Author URI: https://mantrabrain.com
  * Requires at least: 4.4
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 }
 
 if (!defined('LIVE_SALES_NOTIFICATIONS_VERSION')) {
-    define('LIVE_SALES_NOTIFICATIONS_VERSION', '1.0.0');
+    define('LIVE_SALES_NOTIFICATIONS_VERSION', '1.0.1');
 }
 
 
